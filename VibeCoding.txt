@@ -1,0 +1,30 @@
+-prompt well - ak for short answers and latest APIs for today's date
+-ask 2 LLMs the same question
+-ask to break down your request into independently testable steps. Divide problem into small pieces and have LLM to solve problem in steps.
+-ask an LLM then get another LLM to check
+-ask for 3 solutions to the same problem, pick the best. Ask LLM to explain
+
+5 Fundamental skills
+	Thinking
+	Framework
+	Checkpoints
+	Debugging
+	Context
+
+There are usually two modes we work in while coding:
+	Implementing New Feature
+		provide relevant context
+		mention frameworks
+		provide docs with explicit details
+		making incremental changes
+		doing the checkpoints
+		version control
+	
+	Debugging Errors
+		figure out how things work
+		how to get it unstuck from LLM
+		provide as much info as you can
+		always limit code changes to a minimum
+		rate limit API endpoints
+		Create rules file to ensure AI is acting by best security practices, ect
+		

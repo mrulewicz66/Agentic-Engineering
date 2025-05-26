@@ -1,0 +1,37 @@
+async def do_some_processing() -> str:
+	# Do some work
+	return "done!"
+	
+result = await do_some_processing()
+
+
+#All your methods and functions start async. Anytime you call them, use await.
+
+#Asyncio provides a lightweight alternative to threading or multiprocessing. Functions defined with async def are called coroutines - they're special functions that can be paused and resumed.
+
+#Calling a coroutine doesn't execute it immediately - it returns a coroutine object. To actually run a coroutine, you must await it. which schedules it for execution within an event loop. While a coroutine is waiting (e.g. for I/O), the event loop can run other coroutines.
+
+
+More examples:
+
+async def do_some_processing() -> str:
+	# Do some work
+	return "done!"
+	
+# running the function returns a coroutine
+my_coroutine = do_some_processing()
+
+# awaiting the coroutine resturns a result
+my_result = await my_coroutine()
+
+
+Other constructs:
+
+#says results equals await and can parse in multiple coroutines resulting in a list of results
+results = await asyncio.gather(
+	do_some_processing(),
+	do_other_processing(),
+	do_yet_more_processing()
+	)
+	
+	
